@@ -35,14 +35,14 @@ export default function EventsPage() {
     <div className="mx-auto flex max-w-5xl flex-col gap-16 pb-24">
       <Section
         title="How Our Gatherings Work"
-        description="Home -> Community -> Divine -> Home again."
+        description="Home → Community → Divine → Home again."
       >
         <div className="space-y-6 text-lg leading-relaxed text-bone/90">
           <p>
             Each soul bears a stone from their own hearth, to bind home to hall,
             self to kin. We raise the horgr together, share words with the gods
             and ancestors, pour libations, and then return each stone home with
-            renewed blessing. Home -> Community -> Divine -> Home again.
+            renewed blessing. Home → Community → Divine → Home again.
           </p>
           <p>
             Ritual teams rotate, blending poetry, historical text, and lived
