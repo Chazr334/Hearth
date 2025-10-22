@@ -51,29 +51,29 @@ export function EmberField() {
       particle.y = initial
         ? Math.random() * height
         : height + Math.random() * height * 0.2;
-      particle.size = randomBetween(0.9, 2.6);
-      particle.speed = randomBetween(16, 32);
-      particle.drift = randomBetween(-28, 28);
-      particle.life = randomBetween(3, 6.5);
+      particle.size = randomBetween(1.2, 3.4);
+      particle.speed = randomBetween(18, 30);
+      particle.drift = randomBetween(-32, 32);
+      particle.life = randomBetween(4.5, 8.5);
       particle.age = initial ? Math.random() * particle.life : 0;
-      particle.baseAlpha = randomBetween(0.32, 0.62);
-      particle.flicker = randomBetween(0.0012, 0.0026);
+      particle.baseAlpha = randomBetween(0.35, 0.65);
+      particle.flicker = randomBetween(0.001, 0.0022);
       particle.color = BASE_COLORS[Math.floor(Math.random() * BASE_COLORS.length)];
       particle.offset = Math.random() * Math.PI * 2;
-      particle.sway = randomBetween(10, 28);
+      particle.sway = randomBetween(12, 32);
     };
 
     const createParticle = (initial = false): Particle => {
       const particle = {
         x: 0,
         y: 0,
-        size: 1.4,
-        speed: 23,
+        size: 1.8,
+        speed: 22,
         drift: 0,
-        life: 3,
+        life: 4,
         age: 0,
-        baseAlpha: 0.4,
-        flicker: 0.002,
+        baseAlpha: 0.42,
+        flicker: 0.0018,
         color: BASE_COLORS[0],
         offset: 0,
         sway: 8
@@ -114,11 +114,11 @@ export function EmberField() {
           (particle.sway * delta);
 
         if (
-          particle.y < -particle.size ||
-          particle.age >= particle.life ||
-          particle.x < -80 ||
-          particle.x > width + 80
-        ) {
+        particle.y < -height * 0.6 ||
+        particle.age >= particle.life ||
+        particle.x < -80 ||
+        particle.x > width + 80
+      ) {
           resetParticle(particle);
         }
 
@@ -152,8 +152,8 @@ export function EmberField() {
       running = true;
       resize();
       const density = Math.min(
-        230,
-        Math.max(80, Math.floor((width * height) / 16000))
+        260,
+        Math.max(100, Math.floor((width * height) / 14000))
       );
       particles = Array.from({ length: density }, () => createParticle(true));
       lastTime = performance.now();
