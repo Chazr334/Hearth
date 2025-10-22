@@ -29,61 +29,6 @@ body {
   background-attachment: fixed;
 }
 
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  mix-blend-mode: screen;
-}
-
-body::after {
-  background-image: radial-gradient(
-      circle,
-      rgba(255, 196, 125, 0.9) 0%,
-      rgba(255, 196, 125, 0.6) 12%,
-      rgba(255, 196, 125, 0.08) 26%,
-      rgba(255, 196, 125, 0) 55%
-    ),
-    radial-gradient(
-      circle,
-      rgba(255, 149, 58, 0.75) 0%,
-      rgba(255, 149, 58, 0.45) 14%,
-      rgba(255, 149, 58, 0.05) 32%,
-      rgba(255, 149, 58, 0) 58%
-    );
-  background-size: 280px 640px, 340px 720px;
-  background-repeat: repeat;
-  background-position: 0 0, 140px -220px;
-  opacity: 0.32;
-  transform: translate3d(0, 0, 0);
-  animation: ember-fall 38s linear infinite, ember-sway 11s ease-in-out infinite;
-}
-
-body::before {
-  background-image: radial-gradient(
-      circle,
-      rgba(255, 177, 88, 0.75) 0%,
-      rgba(255, 177, 88, 0.45) 14%,
-      rgba(255, 177, 88, 0.05) 28%,
-      rgba(255, 177, 88, 0) 56%
-    ),
-    radial-gradient(
-      circle,
-      rgba(255, 214, 138, 0.6) 0%,
-      rgba(255, 214, 138, 0.3) 18%,
-      rgba(255, 214, 138, 0.04) 32%,
-      rgba(255, 214, 138, 0) 60%
-    );
-  background-size: 220px 520px, 180px 460px;
-  background-repeat: repeat;
-  background-position: 60px -140px, -160px -20px;
-  opacity: 0.22;
-  transform: translate3d(0, 0, 0);
-  animation: ember-fall-alt 52s linear infinite, ember-sway-alt 15s ease-in-out infinite;
-}
-
 a {
   color: #7a2e1f;
   transition: color 150ms ease, text-decoration-color 150ms ease;
@@ -141,10 +86,8 @@ button {
     display: none;
   }
 
-  body::before,
-  body::after {
-    animation: none;
-    opacity: 0;
+  .ember-layer {
+    display: none;
   }
 }
 
@@ -231,74 +174,15 @@ button {
   }
 }
 
-@keyframes ember-fall {
-  0% {
-    background-position: 0 0, 140px -220px;
-    opacity: 0.3;
-  }
-  20% {
-    background-position: -80px 160px, 40px -60px;
-    opacity: 0.38;
-  }
-  50% {
-    background-position: 110px 320px, -90px 120px;
-    opacity: 0.34;
-  }
-  85% {
-    background-position: -120px 440px, 90px 300px;
-    opacity: 0.28;
-  }
-  100% {
-    background-position: 0 560px, 140px 520px;
-    opacity: 0.3;
-  }
+.ember-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
 }
 
-@keyframes ember-fall-alt {
-  0% {
-    background-position: 60px -140px, -160px -20px;
-    opacity: 0.2;
-  }
-  25% {
-    background-position: -40px 20px, -120px 160px;
-    opacity: 0.28;
-  }
-  55% {
-    background-position: 120px 160px, -40px 300px;
-    opacity: 0.24;
-  }
-  100% {
-    background-position: -10px 420px, -150px 520px;
-    opacity: 0.2;
-  }
-}
-
-@keyframes ember-sway {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  30% {
-    transform: translate3d(18px, -12px, 0);
-  }
-  60% {
-    transform: translate3d(-24px, -6px, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes ember-sway-alt {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  40% {
-    transform: translate3d(-12px, -10px, 0);
-  }
-  65% {
-    transform: translate3d(16px, 4px, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
+.ember-layer canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
