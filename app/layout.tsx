@@ -8,6 +8,7 @@ import { ReactNode } from "react";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { EmberField } from "@/components/ember-field";
+import { HearthFlame } from "@/components/hearth-flame";
 import { buildOrganizationJsonLd, siteConfig } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
@@ -81,6 +82,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           Skip to content
         </a>
         <EmberField />
+        <HearthFlame />
         <SiteHeader />
         <main id="main-content" className="relative z-10">
           {children}
