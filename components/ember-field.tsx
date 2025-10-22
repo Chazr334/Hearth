@@ -95,14 +95,15 @@ export function EmberField() {
     };
 
     const render = (now: number) => {
-      if (!ctx || !running) {
+      const context = ctx;
+      if (!context || !running) {
         return;
       }
       const delta = Math.min((now - lastTime) / 1000, 0.033);
       lastTime = now;
 
-      ctx.clearRect(0, 0, width, height);
-      ctx.globalCompositeOperation = "lighter";
+      context.clearRect(0, 0, width, height);
+      context.globalCompositeOperation = "lighter";
 
       particles.forEach((particle) => {
         particle.age += delta;
@@ -129,10 +130,10 @@ export function EmberField() {
           0.95
         );
 
-        ctx.beginPath();
-        ctx.fillStyle = `rgba(${particle.color}, ${alpha.toFixed(3)})`;
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
+        context.beginPath();
+        context.fillStyle = `rgba(${particle.color}, ${alpha.toFixed(3)})`;
+        context.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        context.fill();
       });
 
       if (!disposed) {
