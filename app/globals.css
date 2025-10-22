@@ -35,18 +35,23 @@ body::after {
   inset: 0;
   pointer-events: none;
   background-image: radial-gradient(
-      rgba(217, 164, 65, 0.18) 0%,
-      rgba(217, 164, 65, 0.05) 45%,
-      rgba(217, 164, 65, 0) 65%
+      circle,
+      rgba(255, 210, 140, 0.9) 0%,
+      rgba(255, 210, 140, 0.75) 6%,
+      rgba(255, 210, 140, 0.35) 18%,
+      rgba(255, 210, 140, 0) 45%
     ),
     radial-gradient(
-      rgba(255, 168, 89, 0.14) 0%,
-      rgba(255, 168, 89, 0) 60%
+      circle,
+      rgba(255, 158, 70, 0.75) 0%,
+      rgba(255, 158, 70, 0.45) 8%,
+      rgba(255, 158, 70, 0) 40%
     );
-  background-size: 220px 320px, 180px 260px;
-  background-position: 0 0, 80px 60px;
+  background-size: 140px 320px, 200px 360px;
+  background-repeat: repeat;
+  background-position: 0 0, 90px 40px;
   animation: ember-fall 18s linear infinite;
-  opacity: 0.6;
+  opacity: 0.55;
   mix-blend-mode: screen;
 }
 
@@ -197,15 +202,15 @@ button {
 
 @keyframes ember-fall {
   0% {
-    background-position: 0 0, 80px 60px;
-    opacity: 0.5;
+    background-position: 0 0, 90px 40px;
+    opacity: 0.45;
   }
   50% {
-    background-position: 0 200px, 80px 260px;
-    opacity: 0.65;
+    background-position: 0 240px, 90px 280px;
+    opacity: 0.6;
   }
   100% {
-    background-position: 0 400px, 80px 520px;
-    opacity: 0.5;
+    background-position: 0 480px, 90px 520px;
+    opacity: 0.45;
   }
 }
