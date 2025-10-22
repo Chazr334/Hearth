@@ -24,8 +24,8 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   background-image: linear-gradient(
-      rgba(14, 14, 14, 0.88),
-      rgba(14, 14, 14, 0.9)
+      rgba(14, 14, 14, 0.72),
+      rgba(14, 14, 14, 0.8)
     ),
     url("/hearth-bg.jpg");
   background-size: cover;
