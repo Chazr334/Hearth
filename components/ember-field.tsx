@@ -51,16 +51,16 @@ export function EmberField() {
       particle.y = initial
         ? Math.random() * height
         : height + Math.random() * height * 0.2;
-      particle.size = randomBetween(0.4, 1.4);
-      particle.speed = randomBetween(20, 40);
-      particle.drift = randomBetween(-18, 18);
-      particle.life = randomBetween(2.5, 5.5);
+      particle.size = randomBetween(0.6, 1.8);
+      particle.speed = randomBetween(18, 36);
+      particle.drift = randomBetween(-22, 22);
+      particle.life = randomBetween(2.8, 6.2);
       particle.age = initial ? Math.random() * particle.life : 0;
-      particle.baseAlpha = randomBetween(0.25, 0.55);
-      particle.flicker = randomBetween(0.0014, 0.0024);
+      particle.baseAlpha = randomBetween(0.28, 0.6);
+      particle.flicker = randomBetween(0.0012, 0.0026);
       particle.color = BASE_COLORS[Math.floor(Math.random() * BASE_COLORS.length)];
       particle.offset = Math.random() * Math.PI * 2;
-      particle.sway = randomBetween(6, 18);
+      particle.sway = randomBetween(8, 22);
     };
 
     const createParticle = (initial = false): Particle => {
@@ -72,7 +72,7 @@ export function EmberField() {
         drift: 0,
         life: 3,
         age: 0,
-        baseAlpha: 0.35,
+        baseAlpha: 0.38,
         flicker: 0.002,
         color: BASE_COLORS[0],
         offset: 0,
@@ -152,8 +152,8 @@ export function EmberField() {
       running = true;
       resize();
       const density = Math.min(
-        110,
-        Math.max(40, Math.floor((width * height) / 28000))
+        150,
+        Math.max(55, Math.floor((width * height) / 22000))
       );
       particles = Array.from({ length: density }, () => createParticle(true));
       lastTime = performance.now();
