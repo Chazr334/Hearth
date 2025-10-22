@@ -18,7 +18,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-amber/20 bg-obsidian/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
         <Link
           href="/"
           className="flex items-center gap-3 text-amber transition hover:text-bone focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber"
@@ -31,15 +31,16 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="site-nav hidden md:ml-10 md:flex md:flex-nowrap">
           {navigationLinks.map((item) => {
             const active = pathname === item.href;
             return (
               <Link
                 key={item.href}
                 href={item.href}
+                aria-current={active ? "page" : undefined}
                 className={cn(
-                  "text-sm font-semibold uppercase tracking-[0.2em] transition hover:text-amber focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber",
+                  "site-nav-link text-xs md:text-sm uppercase tracking-[0.2em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber",
                   active ? "text-amber" : "text-bone/80"
                 )}
               >
@@ -64,16 +65,17 @@ export function SiteHeader() {
           )}
         </button>
       </div>
-      <MobileNav open={open} />
+      <MobileNav open={open} pathname={pathname} />
     </header>
   );
 }
 
 interface MobileNavProps {
   open: boolean;
+  pathname: string;
 }
 
-function MobileNav({ open }: MobileNavProps) {
+function MobileNav({ open, pathname }: MobileNavProps) {
   if (!open) {
     return null;
   }
@@ -88,7 +90,8 @@ function MobileNav({ open }: MobileNavProps) {
           <Link
             key={item.href}
             href={item.href}
-            className="text-base font-semibold uppercase tracking-[0.2em] text-bone/90 hover:text-amber focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber"
+            className="site-nav-link w-full justify-start text-base uppercase tracking-[0.2em] text-bone/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber"
+            aria-current={pathname === item.href ? "page" : undefined}
           >
             {item.label}
           </Link>

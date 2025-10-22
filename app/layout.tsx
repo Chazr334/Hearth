@@ -76,10 +76,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           body.variable
         )}
       >
-        <a
-          href="#main-content"
-          className="absolute left-4 top-4 z-50 -translate-y-full rounded bg-iron px-4 py-2 text-sm font-semibold text-bone transition focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-amber"
-        >
+        <a href="#main-content" className="skip-link">
           Skip to content
         </a>
         <SiteHeader />

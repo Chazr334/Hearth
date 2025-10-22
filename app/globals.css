@@ -23,18 +23,13 @@ body {
   font-family: var(--font-body), serif;
   background-color: var(--background);
   color: var(--foreground);
-  background-image: radial-gradient(
-      circle at top left,
-      rgba(122, 46, 31, 0.15),
-      transparent 55%
+  background-image: linear-gradient(
+      rgba(14, 14, 14, 0.88),
+      rgba(14, 14, 14, 0.9)
     ),
-    radial-gradient(
-      circle at 20% 80%,
-      rgba(76, 91, 61, 0.08),
-      transparent 45%
-    ),
-    url("/textures/stone.jpg");
-  background-size: cover, cover, 800px;
+    url("/hearth-bg.jpg");
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -112,4 +107,69 @@ button {
       rgba(122, 46, 31, 0.4)
     )
     1;
+}
+
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  z-index: 100;
+  background-color: rgba(122, 46, 31, 0.9);
+  color: #f3f1e9;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translate(-50%, 0);
+  box-shadow: 0 0 0 2px rgba(217, 164, 65, 0.65);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-block: 0.25rem;
+}
+
+.site-nav::-webkit-scrollbar {
+  height: 6px;
+}
+
+.site-nav::-webkit-scrollbar-thumb {
+  background: rgba(217, 164, 65, 0.35);
+  border-radius: 999px;
+}
+
+.site-nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  transition: color 0.2s ease, text-shadow 0.2s ease, background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.site-nav-link:hover,
+.site-nav-link:focus-visible {
+  color: #d9a441;
+  text-shadow: 0 0 6px rgba(217, 164, 65, 0.45);
+}
+
+.site-nav-link[aria-current="page"] {
+  color: #d9a441;
+}
+
+@media (max-width: 768px) {
+  .site-nav {
+    overflow-x: visible;
+  }
 }
