@@ -10,45 +10,55 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="mx-auto flex max-w-4xl flex-col gap-16 pb-24">
-      <Section title="Statement of Basic Belief">
+      <Section title="Statement Of Basic Belief">
         <div className="space-y-6 text-lg leading-relaxed text-bone/90">
           <p>
-            Hearthfire embraces Heathenry as a living, pluralistic path. We
-            honor the Aesir and the Vanir, the landwights and the honored dead,
-            while welcoming every seeker who approaches with respect, curiosity,
-            and care. Tradition guides us, but community shapes the hall we
-            build together.
-          </p>
-          <p>
-            We ground our ritual work in scholarship, historical practice, and
-            accountable modern interpretation. Every rite is crafted to uplift
-            both ancestral wisdom and contemporary kin, ensuring that reverence
-            never becomes a gate.
+            Hearthfire seeks to establish a foundation of inclusive and pluralistic Heathenry while allowing our
+            community to grow and prosper spiritually.
           </p>
         </div>
       </Section>
 
       <RuneDivider />
 
-      <Section title="What Is Heathenry?" description="A brief guide for new kin.">
+      <Section title="What Is Heathenry?">
         <div className="space-y-6 text-lg leading-relaxed text-bone/90">
           <p>
-            Heathenry is a family of modern revival traditions rooted in the
-            pre-Christian beliefs of Northern Europe. We recognize a tapestry of
-            gods, often described as the Aesir and the Vanir, whose stories
-            illustrate duty, wisdom, and reciprocity.
+            Heathenry is the polytheistic faith derived from the ancient Germanic peoples and the Gods they
+            worshiped and its iterations in the modern day. At Hearthfire, we believe in and use the pre-christian
+            pan-germanic faith of the people who worshiped the Germanic Gods in ancient times as our foundation.
+            Our approach is historically informed, which helps inspire and develop modern living traditions and
+            practices today.
+          </p>
+        </div>
+      </Section>
+
+      <RuneDivider />
+
+      <Section title="Is Hearthfire Right For You?">
+        <div className="space-y-5 text-lg leading-relaxed text-bone/90">
+          <p>
+            Are you looking for an inclusive Heathen Kindred led by well read, educated, compassionate and
+            understanding leadership that still knows how to have fun? Then this is the place for you. Our food is
+            always good, the fellowship is better, and the rituals led by our Goði, Wolf The Red, will leave you
+            spiritually rejuvenated and with much to think about!
           </p>
           <p>
-            At Hearthfire we place special care on the pillars of honor,
-            kinship, reciprocity, and the bond to land. The horgr altar, the
-            sharing of stories, and the giving of gifts are all ways we weave
-            those values into daily life.
+            While Hearthfire has its foundation in Norse Heathenry, we aim to make everyone feel welcome, whether
+            it's your first time with us or you have been with us since the beginning. No matter your path we
+            believe you will find something valuable with us.
           </p>
           <p>
-            Our community includes reconstructionists, eclectic pagans, and
-            curious newcomers. Together we explore saga study, rune lore,
-            language, craft, and service to community. We know that living faith
-            is sustained by both myth and action.
+            Maybe you are an open minded Christian who is searching for something more, or just don't like the way
+            Christian Nationalism is headed in this country. Maybe you're a pagan who is looking for more stability
+            or guidance, or are just tired of being solitary. Maybe you're an atheist but are interested in the
+            histories and culture surrounding the viking age and want to hang out with fellow nerds. And maybe you
+            aren't sure what you believe but you would love to meet other folks who are inclusive and good natured,
+            and would enjoy sharing a meal and have a chat.
+          </p>
+          <p>
+            All this and more is not only welcome at Hearthfire, but encouraged. I assure you, you will find a
+            place here in our community.
           </p>
         </div>
       </Section>

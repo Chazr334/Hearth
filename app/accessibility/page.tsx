@@ -10,17 +10,25 @@ export const metadata: Metadata = {
 export default function AccessibilityPage() {
   return (
     <div className="mx-auto flex max-w-4xl flex-col gap-16 pb-24">
-      <Section title="Access First">
-        <div className="space-y-4 text-lg text-bone/90">
+      <Section title="I'm Disabled In Some Way, And I've Faced Discrimination From Other Groups For It In The Past, Have Been Made To Feel Unwelcome, Or Just Wasn't Thought Of At All. How Does Hearthfire Approach Accessibility?">
+        <div className="space-y-5 text-lg text-bone/90">
           <p>
-            Hearthfire only books ADA-compliant venues. Expect step-free routes,
-            ramps or lifts, accessible restrooms, and parking that stays close
-            to the ritual hall.
+            Accessibility is a top priority for Hearthfire. We already make sure to only rent sites that are ADA
+            compliant, and we make sure all event set ups are done with things like mobility aids in mind. Plenty
+            of space for wheelchairs, crutches and canes. We also make sure people who need to go through the
+            food line first to have plenty of time and options to choose from.
           </p>
           <p>
-            Folks who need extra time in the food line or at the altar get it
-            without question. We invite mobility aids, service animals, and any
-            assistive tech you use daily.
+            For ritual any and all accommodations will be made, wheelchair ramps are always set out and utilized,
+            and if at any point anything is needed to make your stay with us more comfortable we want that feed
+            back to make sure no one is left behind. There is parking up close to the pavilions for folks who
+            need it and the bathrooms are ADA compliant.
+          </p>
+          <p>
+            For those that get overwhelmed and overstimulated, we have plenty of space for those people to step
+            away and get some fresh air and have time to themselves to decompress. There is absolutely no stigma
+            tied to this, many of our long term members take advantage of this. Feel free to bring any items that
+            may help you stay feeling comfortable, such as headphones, a comfort item, or stimming device.
           </p>
         </div>
       </Section>
