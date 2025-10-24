@@ -90,7 +90,7 @@ button {
     display: none;
   }
 
-  .hearth-flame-layer {
+  .hearth-video {
     display: none;
   }
 }
@@ -191,11 +191,11 @@ button {
   display: block;
 }
 
-.hearth-flame-layer {
+.hearth-video {
   position: fixed;
   pointer-events: none;
   left: 50%;
-  bottom: clamp(5vh, 10vw, 14vh);
+  bottom: clamp(4vh, 9vw, 12vh);
   width: clamp(260px, 32vw, 420px);
   height: clamp(190px, 28vh, 320px);
   transform: translateX(-50%);
@@ -204,17 +204,18 @@ button {
   filter: drop-shadow(0 0 18px rgba(255, 180, 90, 0.45));
 }
 
-.hearth-flame-layer canvas {
+.hearth-video__media {
   width: 100%;
   height: 100%;
   display: block;
+  object-fit: cover;
   mask-image: radial-gradient(circle at 50% 90%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 55%, rgba(0, 0, 0, 0) 90%);
   -webkit-mask-image: radial-gradient(circle at 50% 90%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 55%, rgba(0, 0, 0, 0) 90%);
 }
 
 @media (max-width: 768px) {
-  .hearth-flame-layer {
-    bottom: clamp(3vh, 8vw, 12vh);
+  .hearth-video {
+    bottom: clamp(2vh, 7vw, 10vh);
     width: clamp(220px, 46vw, 360px);
     height: clamp(170px, 34vh, 280px);
   }
