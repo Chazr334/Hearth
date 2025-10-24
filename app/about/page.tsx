@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+ï»¿import { Metadata } from "next";
 
 import { RuneDivider } from "@/components/rune-divider";
 import { Section } from "@/components/section";
@@ -40,7 +40,7 @@ export default function AboutPage() {
           <p>
             Are you looking for an inclusive Heathen Kindred led by well read, educated, compassionate and
             understanding leadership that still knows how to have fun? Then this is the place for you. Our food is
-            always good, the fellowship is better, and the rituals led by our Goði, Wolf The Red, will leave you
+            always good, the fellowship is better, and the rituals led by our Goï¿½i, Wolf The Red, will leave you
             spiritually rejuvenated and with much to think about!
           </p>
           <p>
@@ -65,3 +65,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

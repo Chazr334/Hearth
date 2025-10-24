@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 
 import { AccessibilityNote } from "@/components/accessibility-note";
 import { Section } from "@/components/section";
@@ -73,3 +73,4 @@ export default function AccessibilityPage() {
     </div>
   );
 }
+

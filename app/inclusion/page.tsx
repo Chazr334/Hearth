@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+ï»¿import { Metadata } from "next";
 import Link from "next/link";
 
 import { externalLinks } from "@/lib/data";
@@ -76,7 +76,7 @@ export default function InclusionPage() {
           <p>
             Hearthfire is a Heathen focused group. We know a lot of people have had bad experiences with Heathens
             in the past and we are well aware that Heathenry has a significant problem with white supremacy and
-            bigotry broadly. Our Goði, Wolf The Red has been an active and aggressive fighter of those hateful
+            bigotry broadly. Our Goï¿½i, Wolf The Red has been an active and aggressive fighter of those hateful
             beliefs, and in 2024 he carried those principles forward and wrote the Declaration of Flames, a very
             powerful document that can be summarized as such.
           </p>
@@ -101,3 +101,4 @@ export default function InclusionPage() {
     </div>
   );
 }
+
